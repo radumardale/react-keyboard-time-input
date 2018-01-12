@@ -1,8 +1,8 @@
 /* global describe it */
-var ReactTestUtils = require('react-dom/test-utils')
-var expect = require('chai').expect
-var caret = require('../src/lib/caret')
-var render = require('./lib/renderTimeInput')
+import ReactTestUtils from 'react-dom/test-utils';
+import { expect } from 'chai';
+import caret from '../src/lib/caret';
+import render from './lib/renderTimeInput';
 
 describe('up', function () {
   var timeInput

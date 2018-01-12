@@ -6,17 +6,18 @@ module.exports = function (config) {
     frameworks: ['mocha'],
     files: [ 'test/test-*' ],
     preprocessors: { 'test/test-*': ['webpack', 'sourcemap'] },
-    webpack: {
-      devtool: 'inline-source-map',
-      module: {
-        loaders: webpackConfig.module.loaders.concat([{
-          test: /\.js$/,
-          include: path.join(__dirname, 'src'),
-          exclude: /node_modules/,
-          loader: 'isparta'
-        }])
-      }
-    },
+    webpack: webpackConfig,
+    //   {
+    //   devtool: 'inline-source-map',
+    //   module: {
+    //     loaders: webpackConfig.module.loaders.concat([{
+    //       test: /\.js$/,
+    //       include: path.join(__dirname, 'src'),
+    //       exclude: /node_modules/,
+    //       loader: 'isparta'
+    //     }])
+    //   }
+    // },
     webpackServer: {
       quiet: true,
       noInfo: true

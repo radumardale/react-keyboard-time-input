@@ -1,13 +1,14 @@
-var React = require('react')
-var CreateReactClass = require('create-react-class')
-var PropTypes = require('prop-types')
-var isTwelveHourTime = require('./lib/is-twelve-hour-time')
-var replaceCharAt = require('./lib/replace-char-at')
-var getGroupId = require('./lib/get-group-id')
-var getGroups = require('./lib/get-groups')
-var adder = require('./lib/time-string-adder')
-var caret = require('./lib/caret')
-var validate = require('./lib/validate')
+import React from 'react';
+import CreateReactClass from 'create-react-class';
+import PropTypes from 'prop-types';
+import isTwelveHourTime from './lib/is-twelve-hour-time';
+import replaceCharAt from './lib/replace-char-at';
+import getGroupId from './lib/get-group-id';
+import getGroups from './lib/get-groups';
+import adder from './lib/time-string-adder';
+import caret from './lib/caret';
+import validate from './lib/validate';
+
 var SILHOUETTE = '00:00:00:000 AM'
 
 var TimeInput = CreateReactClass({
@@ -206,4 +207,4 @@ var TimeInput = CreateReactClass({
   }
 })
 
-module.exports = TimeInput
+export default TimeInput;
