@@ -1,6 +1,6 @@
 {
-  "name": "time-input",
-  "version": "1.5.1",
+  "name": "react-keyboard-time-input",
+  "version": "1.6.0",
   "description": "A keyboard friendly react component for capturing time",
   "main": "./dist/TimeInput",
   "scripts": {
@@ -65,13 +65,17 @@
     ]
   },
   "keywords": [
+    "simple",
     "field",
     "form",
     "input",
     "picker",
+    "keyboard time",
+    "simple time",
     "time",
     "time input",
-    "timepicker"
+    "timepicker",
+    "keyboard timepicker"
   ],
   "repository": {
     "type": "git",
