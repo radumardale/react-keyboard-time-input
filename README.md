@@ -1,6 +1,8 @@
 # react-keyboard-time-input
 
 [![Build Status](https://travis-ci.org/radumardale/react-keyboard-time-input.svg?branch=master)](https://travis-ci.org/radumardale/react-keyboard-time-input)
+[![codecov](https://codecov.io/gh/radumardale/react-keyboard-time-input/branch/master/graph/badge.svg)](https://codecov.io/gh/radumardale/react-keyboard-time-input)
+
 
 Forked from [alanclarke/time-input](https://github.com/alanclarke/time-input).
 
