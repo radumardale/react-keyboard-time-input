@@ -1,5 +1,5 @@
 module.exports = {
-  "collectCoverage": true,
+  "collectCoverage": false,
   "testMatch": ["<rootDir>/jest-test/*.test.js"],
   "bail": true,
   verbose: false
