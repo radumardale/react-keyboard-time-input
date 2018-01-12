@@ -4,6 +4,7 @@
   "description": "A keyboard friendly react component for capturing time",
   "main": "./dist/TimeInput",
   "scripts": {
+    "test-jest": "jest",
     "start2": "webpack-dev-server --config webpack.config.js",
     "docs": "./node_modules/.bin/webpack --config webpack.config.js",
     "test": "NODE_ENV=test karma start --single-run && node_modules/.bin/standard",
@@ -35,6 +36,7 @@
     "html-webpack-plugin": "^2.30.1",
     "isparta": "^4.0.0",
     "isparta-loader": "^2.0.0",
+    "jest": "^22.0.6",
     "karma": "^0.13.21",
     "karma-chrome-launcher": "^0.2.2",
     "karma-coverage": "^0.5.3",

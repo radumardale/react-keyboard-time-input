@@ -1,6 +1,5 @@
 /* global describe it */
-var expect = require('chai').expect
-var getGroupId = require('../src/lib/get-group-id')
+import getGroupId from '../src/lib/get-group-id';
 
 describe('getGroupId', function () {
   it('should return the correct group index', function () {
@@ -10,7 +9,7 @@ describe('getGroupId', function () {
     function check (indexes, groupId) {
       indexes.forEach(checkIndex)
       function checkIndex (index) {
-        expect(getGroupId(index)).to.eql(groupId)
+        expect(getGroupId(index)).toEqual(groupId)
       }
     }
   })
