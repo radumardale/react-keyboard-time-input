@@ -1,3 +1,3 @@
-module.exports = function getGroups (str) {
+export default (str) => {
   return str.split(/[:\s+]/)
 }

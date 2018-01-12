@@ -1,4 +1,4 @@
-module.exports = function getGroupId (index) {
+export default (index) => {
   if (index < 3) return 0
   if (index < 6) return 1
   if (index < 9) return 2

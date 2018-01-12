@@ -1,9 +1,9 @@
-var zeroPad = require('./zero-pad')
-var getGroups = require('./get-groups')
-var getBase = require('./get-base')
-var stringify = require('./stringify')
-var toggle24Hr = require('./toggle-24-hour')
-var isTwelveHourTime = require('./is-twelve-hour-time')
+import zeroPad from './zero-pad';
+import getGroups from './get-groups';
+import getBase from './get-base';
+import stringify from './stringify';
+import toggle24Hr from './toggle-24-hour';
+import isTwelveHourTime from './is-twelve-hour-time';
 
 module.exports = function adder (str, groupId, amount) {
   var groups = getGroups(str)

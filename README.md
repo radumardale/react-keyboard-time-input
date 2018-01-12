@@ -1,7 +1,10 @@
-# time-input
-Forked from `alanclarke`'s [time-input](https://github.com/alanclarke/time-input).
+# react-keyboard-time-input
+
+Forked from [alanclarke/time-input](https://github.com/alanclarke/time-input).
 
 A keyboard friendly react component for capturing time
+
+[demo](https://radumardale.github.io/react-keyboard-time-input/)
 
 ## features
 - small UI surface area (just a form input)
@@ -50,4 +53,4 @@ npm test
 
 ## demo
 
-[link](https://time-input-tmvbhmidxv.now.sh/)
+[link](https://radumardale.github.io/react-keyboard-time-input/)
