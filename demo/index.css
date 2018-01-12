@@ -1,0 +1,35 @@
+html, body {
+  font-family: 'Droid Sans', sans-serif;
+  background: #fafafa;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+input {
+  font-family: 'Droid Sans', sans-serif;
+}
+.TimeInput {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 100px;
+}
+.TimeInput-input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 2em;
+}
+#demo-1 .TimeInput input {
+  width: 254px;
+}
+#demo-2 .TimeInput input {
+  width: 188px;
+}
+#demo-3 .TimeInput input {
+  width: 136px;
+}
+#demo-4 .TimeInput input {
+  width: 88px;
+}

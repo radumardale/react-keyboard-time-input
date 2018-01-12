@@ -1,27 +1,42 @@
-var React = require('react')
-var ReactDom = require('react-dom')
-var TimeInput = require('../src/TimeInput')
+import React from "react";
 
-;(function render (value) {
-  ReactDom.render((
-    <TimeInput value={value} onChange={render} defaultValue='12:00:00:000 AM'/>
-  ), document.getElementById('demo-1'))
-})('11:30:00:000 PM')
+import TimeInput from "../dist/TimeInput";
 
-;(function render (value) {
-  ReactDom.render((
-    <TimeInput value={value} onChange={render} defaultValue='00:00:00:000'/>
-  ), document.getElementById('demo-2'))
-})('11:30:00:000')
+export default class DemoTimeInput extends React.Component {
 
-;(function render (value) {
-  ReactDom.render((
-    <TimeInput value={value} onChange={render}/>
-  ), document.getElementById('demo-3'))
-})('11:30 PM')
+  constructor(props) {
+    super(props);
+    this.state = {
+      val1: '11:30:00:000 PM',
+      val2: '11:30:00:000',
+      val3: '11:30 PM',
+      val4: '11:30',
+    };
+  }
 
-;(function render (value) {
-  ReactDom.render((
-    <TimeInput value={value} onChange={render}/>
-  ), document.getElementById('demo-4'))
-})('11:30')
+  onInputChange(val) {
+    return time => {
+      this.setState({
+        [val]: time
+      });
+    }
+  }
+
+  render() {
+
+    const keys = Object.keys(this.state);
+
+    return (
+      <div>
+        {keys.map(valName => (
+          <TimeInput
+            key={valName}
+            onChange={this.onInputChange(valName).bind(this)}
+            value={this.state[valName]}
+            defaultValue="12:00:00:000 AM"
+          />
+        ))}
+      </div>
+    );
+  }
+}
