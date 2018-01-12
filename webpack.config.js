@@ -1,6 +1,8 @@
 var path = require('path')
 var webpack = require('webpack')
 
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
   devtool: 'source-map',
   entry: [
@@ -8,12 +10,16 @@ module.exports = {
     './demo/demo.js'
   ],
   output: {
-    path: path.join(__dirname, 'path'),
+    path: path.join(__dirname, 'docs'),
     filename: 'bundle.js'
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
+    new webpack.NoErrorsPlugin(),
+    new HtmlWebpackPlugin({
+      title: 'My App',
+      filename: 'index.html'
+    })
   ],
   module: {
     loaders: [{

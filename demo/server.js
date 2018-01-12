@@ -12,7 +12,7 @@ app.use(webpackDevMiddleware(compiler, { noInfo: true, path: config.output.path 
 app.use(webpackHotMiddleware(compiler))
 
 app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'index.html'))
+  res.sendFile(path.join(__dirname, 'demo.html'))
 })
 
 app.listen(port, function (error) {
