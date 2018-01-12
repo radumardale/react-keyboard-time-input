@@ -1,6 +1,6 @@
 {
-  "name": "time-input",
-  "version": "1.5.1",
+  "name": "react-keyboard-time-input",
+  "version": "1.6.0",
   "description": "A keyboard friendly react component for capturing time",
   "main": "./dist/TimeInput",
   "scripts": {
@@ -12,9 +12,10 @@
   },
   "author": "Alan Clarke <hi@alz.so> (alz.so)",
   "contributors": [
-    "Matt Livingston <matt.l.livingston@gmail.com>"
+    "Matt Livingston <matt.l.livingston@gmail.com>",
+    "Radu Mardale <radu.mardale@gmail.com>"
   ],
-  "license": "UNLICENSED",
+  "license": "MIT",
   "dependencies": {},
   "devDependencies": {
     "babel-cli": "^6.10.1",
@@ -53,7 +54,7 @@
     "webpack-hot-middleware": "^2.7.1"
   },
   "peerDependencies": {
-    "react": "^0.14.0 || ^15.0.0"
+    "react": "^0.14.0 || ^15.0.0 || ^16.0.0"
   },
   "directories": {
     "test": "test"
@@ -64,20 +65,24 @@
     ]
   },
   "keywords": [
+    "simple",
     "field",
     "form",
     "input",
     "picker",
+    "keyboard time",
+    "simple time",
     "time",
     "time input",
-    "timepicker"
+    "timepicker",
+    "keyboard timepicker"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alanclarke/time-input.git"
+    "url": "git+https://github.com/radumardale/react-keyboard-time-input.git"
   },
   "bugs": {
-    "url": "https://github.com/alanclarke/time-input/issues"
+    "url": "https://github.com/radumardale/react-keyboard-time-input/issues"
   },
-  "homepage": "https://github.com/alanclarke/time-input#readme"
+  "homepage": "https://github.com/radumardale/react-keyboard-time-input#readme"
 }
