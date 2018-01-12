@@ -1,27 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
 html, body {
-  font-family: 'Droid Sans', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   background: #fafafa;
   height: 100%;
   padding: 0;
   margin: 0;
   position: relative;
 }
+body{
+  width: 920px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
 input {
-  font-family: 'Droid Sans', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 .TimeInput {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 100px;
+  margin-bottom: 40px;
 }
 .TimeInput-input {
-  padding: 10px;
-  border-radius: 5px;
+  padding: 6px 4px;
+  border-radius: 2px;
   border: 1px solid #ddd;
-  font-size: 2em;
+  font-size: 1.2em;
 }
-#demo-1 .TimeInput input {
+/* #demo-1 .TimeInput input {
   width: 254px;
 }
 #demo-2 .TimeInput input {
@@ -32,4 +40,4 @@ input {
 }
 #demo-4 .TimeInput input {
   width: 88px;
-}
+} */

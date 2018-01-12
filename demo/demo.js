@@ -28,6 +28,7 @@ export default class DemoTimeInput extends React.Component {
 
     return (
       <div>
+        <h2>DEMO react-keyboard-time-input</h2>
         {keys.map(valName => (
           <TimeInput
             key={valName}

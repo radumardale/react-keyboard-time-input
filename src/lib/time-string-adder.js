@@ -5,13 +5,6 @@ import stringify from './stringify';
 import toggle24Hr from './toggle-24-hour';
 import isTwelveHourTime from './is-twelve-hour-time';
 
-module.exports = function adder (str, groupId, amount) {
-  var groups = getGroups(str)
-  var twelveHourTime = isTwelveHourTime(groups)
-  if (twelveHourTime && groupId === groups.length - 1) return stringify(toggle24Hr(groups))
-  return stringify(add(groups, groupId, amount, twelveHourTime))
-}
-
 function add (groups, groupId, amount, twelveHourTime) {
   var base = getBase(groupId, twelveHourTime)
   if (!groupId && groups[groupId] === '12' && twelveHourTime) groups[groupId] = '00'
@@ -30,4 +23,12 @@ function replace (groups, groupId, amount) {
   var digits = groups[groupId].length
   groups[groupId] = zeroPad(String(amount), digits)
   return groups
+}
+
+// export default function adder(str, groupId, amount) {
+export default (str, groupId, amount) => {
+  var groups = getGroups(str)
+  var twelveHourTime = isTwelveHourTime(groups)
+  if (twelveHourTime && groupId === groups.length - 1) return stringify(toggle24Hr(groups))
+  return stringify(add(groups, groupId, amount, twelveHourTime))
 }
