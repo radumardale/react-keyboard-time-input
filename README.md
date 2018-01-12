@@ -1,4 +1,6 @@
 # time-input
+Forked from `alanclarke`'s [time-input](https://github.com/alanclarke/time-input).
+
 A keyboard friendly react component for capturing time
 
 ## features
@@ -11,13 +13,17 @@ A keyboard friendly react component for capturing time
 
 ## installation
 ```
-npm install time-input
+npm install react-keyboard-time-input
+```
+or
+```
+yarn add react-keyboard-time-input
 ```
 
 ## usage
 ```js
 var ReactDom = require('ReactDom')
-var TimeInput = require('time-input')
+var TimeInput = require('react-keyboard-time-input')
 
 function render (value) {
   ReactDom.render((
