@@ -1,6 +1,6 @@
 {
   "name": "react-keyboard-time-input",
-  "version": "1.6.0",
+  "version": "2.0.0",
   "description": "A keyboard friendly react component for capturing time",
   "main": "./dist/TimeInput",
   "scripts": {
@@ -8,11 +8,8 @@
     "start": "webpack-dev-server --config webpack.config.js",
     "docs": "./node_modules/.bin/webpack --config webpack.config.js",
     "test": "NODE_ENV=test karma start --single-run && node_modules/.bin/standard",
-    "demo": "node demo/server.js",
     "compile": "NODE_ENV=production babel -d dist/ src/",
-    "compile:es": "BABEL_ENV=es NODE_ENV=production babel -d dist/ src/",
-    "prepublish": "npm run compile",
-    "miau": "BABEL_ENV=es babel ./src --out-file ./dist/index.es.js"
+    "prepublish": "npm run compile"
   },
   "author": "Alan Clarke <hi@alz.so> (alz.so)",
   "contributors": [
