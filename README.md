@@ -2,7 +2,9 @@
 
 [![Build Status](https://travis-ci.org/radumardale/react-keyboard-time-input.svg?branch=master)](https://travis-ci.org/radumardale/react-keyboard-time-input)
 [![codecov](https://codecov.io/gh/radumardale/react-keyboard-time-input/branch/master/graph/badge.svg)](https://codecov.io/gh/radumardale/react-keyboard-time-input)
-
+[![PeerDependencies](https://img.shields.io/david/peer/radumardale/react-keyboard-time-input.svg)](https://david-dm.org/radumardale/react-keyboard-time-input#info=peerDependencies&view=list)
+[![Dependencies](https://img.shields.io/david/radumardale/react-keyboard-time-input.svg)](https://david-dm.org/radumardale/react-keyboard-time-input)
+[![DevDependencies](https://img.shields.io/david/dev/radumardale/react-keyboard-time-input.svg)](https://david-dm.org/radumardale/react-keyboard-time-input#info=devDependencies&view=list)
 
 Forked from [alanclarke/time-input](https://github.com/alanclarke/time-input).
 
