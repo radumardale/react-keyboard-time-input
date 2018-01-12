@@ -12,9 +12,10 @@
   },
   "author": "Alan Clarke <hi@alz.so> (alz.so)",
   "contributors": [
-    "Matt Livingston <matt.l.livingston@gmail.com>"
+    "Matt Livingston <matt.l.livingston@gmail.com>",
+    "Radu Mardale <radu.mardale@gmail.com>"
   ],
-  "license": "UNLICENSED",
+  "license": "MIT",
   "dependencies": {},
   "devDependencies": {
     "babel-cli": "^6.10.1",
@@ -53,7 +54,7 @@
     "webpack-hot-middleware": "^2.7.1"
   },
   "peerDependencies": {
-    "react": "^0.14.0 || ^15.0.0"
+    "react": "^0.14.0 || ^15.0.0 || ^16.0.0"
   },
   "directories": {
     "test": "test"
