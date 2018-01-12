@@ -75,10 +75,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alanclarke/time-input.git"
+    "url": "git+https://github.com/radumardale/react-keyboard-time-input.git"
   },
   "bugs": {
-    "url": "https://github.com/alanclarke/time-input/issues"
+    "url": "https://github.com/radumardale/react-keyboard-time-input/issues"
   },
-  "homepage": "https://github.com/alanclarke/time-input#readme"
+  "homepage": "https://github.com/radumardale/react-keyboard-time-input#readme"
 }
