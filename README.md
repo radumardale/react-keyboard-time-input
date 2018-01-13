@@ -2,18 +2,18 @@
 
 [![Build Status](https://travis-ci.org/radumardale/react-keyboard-time-input.svg?branch=master)](https://travis-ci.org/radumardale/react-keyboard-time-input)
 [![codecov](https://codecov.io/gh/radumardale/react-keyboard-time-input/branch/master/graph/badge.svg)](https://codecov.io/gh/radumardale/react-keyboard-time-input)
+
 [![PeerDependencies](https://img.shields.io/david/peer/radumardale/react-keyboard-time-input.svg)](https://david-dm.org/radumardale/react-keyboard-time-input#info=peerDependencies&view=list)
 [![Dependencies](https://img.shields.io/david/radumardale/react-keyboard-time-input.svg)](https://david-dm.org/radumardale/react-keyboard-time-input)
 [![DevDependencies](https://img.shields.io/david/dev/radumardale/react-keyboard-time-input.svg)](https://david-dm.org/radumardale/react-keyboard-time-input#info=devDependencies&view=list)
 
 Forked from [alanclarke/time-input](https://github.com/alanclarke/time-input).
 
-A keyboard friendly react component for capturing time
+A keyboard friendly react component for capturing time - [demo](https://radumardale.github.io/react-keyboard-time-input/)
 
-[demo](https://radumardale.github.io/react-keyboard-time-input/)
+#### Only es6 modules (`import/export default`) import is available. `commonjs` (`require()/module.export`) build is published but is not tested.
 
-#### Only es6 modules import is available
-`commonjs` imports might work but have not been tested yet.
+[DEMO HERE](https://radumardale.github.io/react-keyboard-time-input/)
 
 ## Features
 - small UI surface area (just a form input)
