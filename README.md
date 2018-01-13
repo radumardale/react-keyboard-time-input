@@ -13,7 +13,9 @@ A keyboard friendly react component for capturing time
 [demo](https://radumardale.github.io/react-keyboard-time-input/)
 
 #### Only es6 modules import is available
-## features
+`commonjs` imports might work but have not been tested yet.
+
+## Features
 - small UI surface area (just a form input)
 - keyboard friendly (can type times, use up and down keys to go forwards and backwards in time, can tab between time groups)
 - simple api (infers most options from value, e.g. 24hr time or 12hr, whether to display seconds and milliseconds)
@@ -21,16 +23,16 @@ A keyboard friendly react component for capturing time
 - no dependencies
 - 95% test coverage
 
-## installation
-```
-npm install react-keyboard-time-input
-```
-or
+## Installation
 ```
 yarn add react-keyboard-time-input
 ```
+or
+```
+npm install react-keyboard-time-input
+```
 
-## usage
+## Usage
 ```js
 import ReactDom from 'ReactDom';
 import TimeInput from 'react-keyboard-time-input';
@@ -44,7 +46,7 @@ function render (value) {
 render()
 ```
 
-## valid formats
+## Valid formats
 ```js
 /*
  * '12:00'
@@ -53,11 +55,7 @@ render()
  * '12:00:00:000 AM'
 */
 ```
-## run tests
+## Run tests
 ```
 npm test
 ```
-
-## demo
-
-[link](https://radumardale.github.io/react-keyboard-time-input/)
