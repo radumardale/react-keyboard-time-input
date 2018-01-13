@@ -2,17 +2,12 @@
 
 html, body {
   font-family: 'Source Sans Pro', sans-serif;
-  background: #fafafa;
+  background: white;
   height: 100%;
   padding: 0;
   margin: 0;
   position: relative;
-}
-body{
-  width: 920px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+  color: #263238;
 }
 input {
   font-family: 'Source Sans Pro', sans-serif;
@@ -24,8 +19,45 @@ input {
   margin-bottom: 40px;
 }
 .TimeInput-input {
-  padding: 6px 4px;
+  color: #455A64;
+  padding: 6px 8px;
   border-radius: 2px;
-  border: 1px solid #ddd;
+  border: 1px solid #CFD8DC;
   font-size: 1.2em;
+}
+.demo-header {
+  display: flex;
+  background: #CFD8DC;
+  padding: 12px;
+  align-items:center;
+  border-bottom: 1px solid #90A4AE;
+}
+.middle-container {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.demo-header__middle{
+  align-items:center;
+  max-width: 720px;
+  display: flex;
+  flex-direction: row;
+  flex:1 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+.demo-header__middle h4 {
+  color: #37474F;
+  flex: 1 0 auto;
+  margin: 0;
+}
+a.github-link {
+  display: flex;
+  align-items: center;
+}
+a.github-link   img {
+  height: 1em;
 }

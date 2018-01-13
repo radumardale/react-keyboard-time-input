@@ -5,13 +5,13 @@
   "module": "./dist/commonjs/TimeInput",
   "main": "./dist/TimeInput",
   "scripts": {
-    "deploy:docs": "gh-pages -d docs",
+    "predeploy-docs": "./node_modules/.bin/webpack --config webpack.config.js",
+    "deploy-docs": "gh-pages -d docs",
     "eslint": "eslint --config ./.eslintrc.js ./src --ext .js,.jsx",
     "pretest": "yarn run eslint",
     "test": "jest --coverage",
     "coverage-ci": "codecov",
     "start": "webpack-dev-server --config webpack.config.js",
-    "docs": "./node_modules/.bin/webpack --config webpack.config.js",
     "compile": "NODE_ENV=production babel -d dist/ src/",
     "compile:common": "BABEL_ENV=commonjs NODE_ENV=production babel -d dist/commonjs/ src/",
     "preprepublish": "yarn run test",
@@ -23,7 +23,9 @@
     "Radu Mardale <radu.mardale@gmail.com>"
   ],
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "file-loader": "^1.1.6"
+  },
   "devDependencies": {
     "babel-cli": "^6.10.1",
     "babel-core": "^6.26.0",

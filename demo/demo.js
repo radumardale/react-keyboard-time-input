@@ -1,6 +1,7 @@
 import React from 'react';
 
 import TimeInput from '../dist/TimeInput';
+import gitLogo from './github.png';
 
 export default class DemoTimeInput extends React.Component {
   constructor(props) {
@@ -26,15 +27,27 @@ export default class DemoTimeInput extends React.Component {
 
     return (
       <div>
-        <h2>DEMO react-keyboard-time-input</h2>
-        {keys.map(valName => (
-          <TimeInput
-            key={valName}
-            onChange={this.onInputChange(valName).bind(this)}
-            value={this.state[valName]}
-            defaultValue="12:00:00:000 AM"
-          />
-        ))}
+        <div className="demo-header">
+          <div className="demo-header__middle">
+            <h4>react-keyboard-time-input demo</h4>
+            <a
+              href="https://github.com/radumardale/react-keyboard-time-input"
+              className="github-link">
+              <img src={gitLogo} />
+            </a>
+          </div>
+        </div>
+
+        <div className="middle-container">
+          {keys.map(valName => (
+            <TimeInput
+              key={valName}
+              onChange={this.onInputChange(valName).bind(this)}
+              value={this.state[valName]}
+              defaultValue="12:00:00:000 AM"
+            />
+          ))}
+        </div>
       </div>
     );
   }
