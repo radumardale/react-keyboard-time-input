@@ -1,3 +1,1 @@
-export default str => {
-  return str.split(/[:\s+]/);
-};
+export default str => str.split(/[:\s+]/);

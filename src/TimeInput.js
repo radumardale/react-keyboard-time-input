@@ -96,9 +96,7 @@ var TimeInput = CreateReactClass({
     this.onChange(value, start);
   },
   silhouette() {
-    return this.props.value.replace(/\d/g, function(val, i) {
-      return SILHOUETTE.charAt(i);
-    });
+    return this.props.value.replace(/\d/g, (val, i) => SILHOUETTE.charAt(i));
   },
   handleBackspace(event) {
     event.preventDefault();
@@ -204,7 +202,7 @@ var TimeInput = CreateReactClass({
       if (this.mounted) this.setState({ caretIndex: caretIndex });
     }
   },
-  onChange: function(str, caretIndex) {
+  onChange(str, caretIndex) {
     if (this.props.onChange) this.props.onChange(this.format(str));
     if (this.mounted && typeof caretIndex === 'number')
       this.setState({ caretIndex: caretIndex });
