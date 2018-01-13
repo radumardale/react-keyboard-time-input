@@ -9,7 +9,7 @@
 
 Forked from [alanclarke/time-input](https://github.com/alanclarke/time-input).
 
-A keyboard friendly react component for capturing time - [demo](https://radumardale.github.io/react-keyboard-time-input/)
+A keyboard friendly react component for capturing time.
 
 #### Only es6 modules (`import/export default`) import is available. `commonjs` (`require()/module.export`) build is published but is not tested.
 
