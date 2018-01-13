@@ -4,6 +4,8 @@
   "description": "A keyboard friendly react component for capturing time",
   "main": "./dist/TimeInput",
   "scripts": {
+    "eslint": "eslint --config ./.eslintrc.js ./src --ext .js,.jsx",
+    "pretest": "yarn run eslint",
     "test": "jest --coverage",
     "coverage-ci": "codecov",
     "start": "webpack-dev-server --config webpack.config.js",
