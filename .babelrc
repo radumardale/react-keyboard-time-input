@@ -4,9 +4,6 @@
     "react"
   ],
   "env": {
-    "development": {
-      "presets": ["react-hmre"]
-    },
     "test": {
       "presets": [["es2015"], "react"]
     },
