@@ -1,6 +1,7 @@
 import React from 'react';
 import CreateReactClass from 'create-react-class';
 import PropTypes from 'prop-types';
+
 import isTwelveHourTime from './lib/is-twelve-hour-time';
 import replaceCharAt from './lib/replace-char-at';
 import getGroupId from './lib/get-group-id';
@@ -9,7 +10,10 @@ import adder from './lib/time-string-adder';
 import caret from './lib/caret';
 import validate from './lib/validate';
 
-var SILHOUETTE = '00:00:00:000 AM';
+const SILHOUETTE = '00:00:00:000 AM';
+
+// isSeparator :: Char -> Bool
+const isSeparator = char => /[:\s]/.test(char);
 
 var TimeInput = CreateReactClass({
   getInitialState() {
@@ -121,7 +125,7 @@ var TimeInput = CreateReactClass({
     if (value.charAt(start - 1) === ':') start--;
     this.onChange(value, start);
   },
-  handleForwardspace(event) {
+  handleForwardSpace(event) {
     event.preventDefault();
     var start = caret.start(this.input);
     var value = this.props.value;
@@ -145,32 +149,37 @@ var TimeInput = CreateReactClass({
     this.onChange(value, start);
   },
   handleKeyDown(event) {
-    if (event.which === 9) return this.handleTab(event);
-    if (event.which === 38 || event.which === 40)
+    switch (event.which) {
+    case 9: // Tab
+      return this.handleTab(event);
+    case 8: // Backspace
+      return this.handleBackspace(event);
+    case 46: // Forward
+      return this.handleForwardSpace(event);
+    case 27: // Esc
+      return this.handleEscape(event);
+    case 38: // Left
+    case 40: // Right
       return this.handleArrows(event);
-    if (event.which === 8) return this.handleBackspace(event);
-    if (event.which === 46) return this.handleForwardspace(event);
-    if (event.which === 27) return this.handleEscape(event);
-  },
-  isSeparator(char) {
-    return /[:\s]/.test(char);
+    default:
+      break;
+    }
   },
   handleChange(event) {
-    var value = this.props.value;
-    var newValue = this.input.value;
-    // newValue += value.substr(newValue.length, value.length)
-    var diff = newValue.length - value.length;
-    var end = caret.start(this.input);
-    var insertion;
-    var start = end - Math.abs(diff);
+    let value = this.props.value;
+    let newValue = this.input.value;
+    let diff = newValue.length - value.length;
+    let end = caret.start(this.input);
+    let insertion;
+    let start = end - Math.abs(diff);
     event.preventDefault();
     if (diff > 0) {
       insertion = newValue.slice(end - diff, end);
       while (diff--) {
-        var oldChar = value.charAt(start);
-        var newChar = insertion.charAt(0);
-        if (this.isSeparator(oldChar)) {
-          if (this.isSeparator(newChar)) {
+        let oldChar = value.charAt(start);
+        let newChar = insertion.charAt(0);
+        if (isSeparator(oldChar)) {
+          if (isSeparator(newChar)) {
             insertion = insertion.slice(1);
             start++;
           } else {
@@ -188,7 +197,7 @@ var TimeInput = CreateReactClass({
     } else {
       if (newValue.charAt(start) === ':') start++;
       // apply default to selection
-      var result = value;
+      let result = value;
       for (var i = start; i < end; i++) {
         result = replaceCharAt(result, i, newValue.charAt(i));
       }
