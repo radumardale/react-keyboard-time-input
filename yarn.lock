@@ -2,94 +2,13 @@
 # yarn lockfile v1
 
 
-"@babel/code-frame@7.0.0-beta.37", "@babel/code-frame@^7.0.0-beta.35":
+"@babel/code-frame@^7.0.0-beta.35":
   version "7.0.0-beta.37"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.0.0-beta.37.tgz#2da1dd3b1b57bfdea777ddc378df7cd12fe40171"
   dependencies:
     chalk "^2.0.0"
     esutils "^2.0.2"
     js-tokens "^3.0.0"
-
-"@babel/core@^7.0.0-beta.37":
-  version "7.0.0-beta.37"
-  resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.0.0-beta.37.tgz#a6291a7892643e36b721e56bcf132d9cc1b65b08"
-  dependencies:
-    "@babel/code-frame" "7.0.0-beta.37"
-    "@babel/generator" "7.0.0-beta.37"
-    "@babel/helpers" "7.0.0-beta.37"
-    "@babel/template" "7.0.0-beta.37"
-    "@babel/traverse" "7.0.0-beta.37"
-    "@babel/types" "7.0.0-beta.37"
-    babylon "7.0.0-beta.37"
-    convert-source-map "^1.1.0"
-    debug "^3.0.1"
-    json5 "^0.5.0"
-    lodash "^4.2.0"
-    micromatch "^2.3.11"
-    resolve "^1.3.2"
-    source-map "^0.5.0"
-
-"@babel/generator@7.0.0-beta.37":
-  version "7.0.0-beta.37"
-  resolved "https://registry.yarnpkg.com/@babel/generator/-/generator-7.0.0-beta.37.tgz#df5183995f20af4afe3bd5499a4c1336355fc163"
-  dependencies:
-    "@babel/types" "7.0.0-beta.37"
-    jsesc "^2.5.1"
-    lodash "^4.2.0"
-    source-map "^0.5.0"
-    trim-right "^1.0.1"
-
-"@babel/helper-function-name@7.0.0-beta.37":
-  version "7.0.0-beta.37"
-  resolved "https://registry.yarnpkg.com/@babel/helper-function-name/-/helper-function-name-7.0.0-beta.37.tgz#add0b76b2947b495a95498de9f2096808c29d2d7"
-  dependencies:
-    "@babel/helper-get-function-arity" "7.0.0-beta.37"
-    "@babel/template" "7.0.0-beta.37"
-    "@babel/types" "7.0.0-beta.37"
-
-"@babel/helper-get-function-arity@7.0.0-beta.37":
-  version "7.0.0-beta.37"
-  resolved "https://registry.yarnpkg.com/@babel/helper-get-function-arity/-/helper-get-function-arity-7.0.0-beta.37.tgz#430fec8d4bc804f20c84ee0ba63a807edf1fb0c1"
-  dependencies:
-    "@babel/types" "7.0.0-beta.37"
-
-"@babel/helpers@7.0.0-beta.37":
-  version "7.0.0-beta.37"
-  resolved "https://registry.yarnpkg.com/@babel/helpers/-/helpers-7.0.0-beta.37.tgz#d811eef60749883b0249f48a00d681b8b3344a92"
-  dependencies:
-    "@babel/template" "7.0.0-beta.37"
-    "@babel/traverse" "7.0.0-beta.37"
-    "@babel/types" "7.0.0-beta.37"
-
-"@babel/template@7.0.0-beta.37":
-  version "7.0.0-beta.37"
-  resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.0.0-beta.37.tgz#d51a5c8c7bfc1ff08f3623231b7d388a9e9b3570"
-  dependencies:
-    "@babel/code-frame" "7.0.0-beta.37"
-    "@babel/types" "7.0.0-beta.37"
-    babylon "7.0.0-beta.37"
-    lodash "^4.2.0"
-
-"@babel/traverse@7.0.0-beta.37":
-  version "7.0.0-beta.37"
-  resolved "https://registry.yarnpkg.com/@babel/traverse/-/traverse-7.0.0-beta.37.tgz#50fe6d841521cebb1486cf5e398f34b007a86812"
-  dependencies:
-    "@babel/code-frame" "7.0.0-beta.37"
-    "@babel/helper-function-name" "7.0.0-beta.37"
-    "@babel/types" "7.0.0-beta.37"
-    babylon "7.0.0-beta.37"
-    debug "^3.0.1"
-    globals "^11.1.0"
-    invariant "^2.2.0"
-    lodash "^4.2.0"
-
-"@babel/types@7.0.0-beta.37":
-  version "7.0.0-beta.37"
-  resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.0.0-beta.37.tgz#fa93af9aa9d85c331729bb923495af04d9b0617d"
-  dependencies:
-    esutils "^2.0.2"
-    lodash "^4.2.0"
-    to-fast-properties "^2.0.0"
 
 "@types/node@*":
   version "9.3.0"
@@ -1136,10 +1055,6 @@ babel-types@^6.18.0, babel-types@^6.19.0, babel-types@^6.23.0, babel-types@^6.24
     lodash "^4.17.4"
     to-fast-properties "^1.0.3"
 
-babylon@7.0.0-beta.37:
-  version "7.0.0-beta.37"
-  resolved "https://registry.yarnpkg.com/babylon/-/babylon-7.0.0-beta.37.tgz#55a9eacab576c2d5e2832bc7b49a567e7c64bbc9"
-
 babylon@^6.11.0, babylon@^6.18.0:
   version "6.18.0"
   resolved "https://registry.yarnpkg.com/babylon/-/babylon-6.18.0.tgz#af2f3b88fa6f5c1e4c634d1a0f8eac4f55b395e3"
@@ -1871,7 +1786,7 @@ debug@2.6.9, debug@^2.1.1, debug@^2.2.0, debug@^2.3.3, debug@^2.6.6, debug@^2.6.
   dependencies:
     ms "2.0.0"
 
-debug@^3.0.1, debug@^3.1.0:
+debug@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/debug/-/debug-3.1.0.tgz#5bb5a0672628b64149566ba16819e61518c67261"
   dependencies:
@@ -3017,7 +2932,7 @@ glob@^7.0.3:
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
-globals@^11.0.1, globals@^11.1.0:
+globals@^11.0.1:
   version "11.1.0"
   resolved "https://registry.yarnpkg.com/globals/-/globals-11.1.0.tgz#632644457f5f0e3ae711807183700ebf2e4633e4"
 
@@ -3436,7 +3351,7 @@ interpret@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/interpret/-/interpret-1.1.0.tgz#7ed1b1410c6a0e0f78cf95d3b8440c63f78b8614"
 
-invariant@^2.2.0, invariant@^2.2.2:
+invariant@^2.2.2:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/invariant/-/invariant-2.2.2.tgz#9e1f56ac0acdb6bf303306f338be3b204ae60360"
   dependencies:
@@ -4130,10 +4045,6 @@ jsdom@^11.5.1:
 jsesc@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/jsesc/-/jsesc-1.3.0.tgz#46c3fec8c1892b12b0833db9bc7622176dbab34b"
-
-jsesc@^2.5.1:
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/jsesc/-/jsesc-2.5.1.tgz#e421a2a8e20d6b0819df28908f782526b96dd1fe"
 
 jsesc@~0.5.0:
   version "0.5.0"
@@ -5648,7 +5559,7 @@ resolve@1.1.7, resolve@1.1.x, resolve@^1.1.6:
   version "1.1.7"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.1.7.tgz#203114d82ad2c5ed9e8e0411b3932875e889e97b"
 
-resolve@^1.1.7, resolve@^1.3.2:
+resolve@^1.1.7:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.5.0.tgz#1f09acce796c9a762579f31b2c1cc4c3cddf9f36"
   dependencies:
@@ -6358,10 +6269,6 @@ to-arraybuffer@^1.0.0:
 to-fast-properties@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/to-fast-properties/-/to-fast-properties-1.0.3.tgz#b83571fa4d8c25b82e231b06e3a3055de4ca1a47"
-
-to-fast-properties@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/to-fast-properties/-/to-fast-properties-2.0.0.tgz#dc5e698cbd079265bc73e0377681a4e4e83f616e"
 
 to-object-path@^0.3.0:
   version "0.3.0"
