@@ -2,7 +2,7 @@
   "name": "react-keyboard-time-input",
   "version": "2.0.3",
   "description": "A keyboard friendly react component for capturing time",
-  "module": "./dist/common/TimeInput",
+  "module": "./dist/commonjs/TimeInput",
   "main": "./dist/TimeInput",
   "scripts": {
     "eslint": "eslint --config ./.eslintrc.js ./src --ext .js,.jsx",
@@ -12,7 +12,7 @@
     "start": "webpack-dev-server --config webpack.config.js",
     "docs": "./node_modules/.bin/webpack --config webpack.config.js",
     "compile": "NODE_ENV=production babel -d dist/ src/",
-    "compile:common": "BABEL_ENV=commonjs NODE_ENV=production babel -d dist/common/ src/",
+    "compile:common": "BABEL_ENV=commonjs NODE_ENV=production babel -d dist/commonjs/ src/",
     "preprepublish": "yarn run test",
     "prepublish": "yarn run compile && yarn run compile:common"
   },
