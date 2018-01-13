@@ -5,6 +5,7 @@
   "module": "./dist/commonjs/TimeInput",
   "main": "./dist/TimeInput",
   "scripts": {
+    "deploy:docs": "gh-pages -d demo",
     "eslint": "eslint --config ./.eslintrc.js ./src --ext .js,.jsx",
     "pretest": "yarn run eslint",
     "test": "jest --coverage",
