@@ -5,7 +5,7 @@
   "module": "./dist/commonjs/TimeInput",
   "main": "./dist/TimeInput",
   "scripts": {
-    "deploy:docs": "gh-pages -d demo",
+    "deploy:docs": "gh-pages -d docs",
     "eslint": "eslint --config ./.eslintrc.js ./src --ext .js,.jsx",
     "pretest": "yarn run eslint",
     "test": "jest --coverage",
@@ -37,6 +37,7 @@
     "create-react-class": "^15.5.3",
     "eslint": "^4.15.0",
     "eslint-plugin-react": "^7.5.1",
+    "gh-pages": "^1.1.0",
     "html-webpack-plugin": "^2.30.1",
     "jest": "^22.0.6",
     "prettier": "^1.10.2",
