@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "518a3e9e49546c37cf57"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "c30f895a7b64d5233aee"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -1323,7 +1323,7 @@ module.exports = ReactPropTypesSecret;
 /* 10 */
 /***/ (function(module, exports) {
 
-module.exports = "@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');\n\nhtml, body {\n  font-family: 'Source Sans Pro', sans-serif;\n  background: #fafafa;\n  height: 100%;\n  padding: 0;\n  margin: 0;\n  position: relative;\n}\nbody{\n  width: 920px;\n  margin-left: auto;\n  margin-right: auto;\n  text-align: center;\n}\ninput {\n  font-family: 'Source Sans Pro', sans-serif;\n}\n.TimeInput {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  margin-bottom: 40px;\n}\n.TimeInput-input {\n  padding: 6px 4px;\n  border-radius: 2px;\n  border: 1px solid #ddd;\n  font-size: 1.2em;\n}\n"
+module.exports = "@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');\n\nhtml, body {\n  font-family: 'Source Sans Pro', sans-serif;\n  background: white;\n  height: 100%;\n  padding: 0;\n  margin: 0;\n  position: relative;\n  color: #263238;\n}\ninput {\n  font-family: 'Source Sans Pro', sans-serif;\n}\n.TimeInput {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  margin-bottom: 40px;\n}\n.TimeInput-input {\n  color: #455A64;\n  padding: 6px 8px;\n  border-radius: 2px;\n  border: 1px solid #CFD8DC;\n  font-size: 1.2em;\n}\n.demo-header {\n  display: flex;\n  background: #CFD8DC;\n  padding: 12px;\n  align-items:center;\n  border-bottom: 1px solid #90A4AE;\n}\n.middle-container {\n  margin-top: 24px;\n  display: flex;\n  flex-direction: column;\n  max-width: 720px;\n  margin-left: auto;\n  margin-right: auto;\n}\n.demo-header__middle{\n  align-items:center;\n  max-width: 720px;\n  display: flex;\n  flex-direction: row;\n  flex:1 0 auto;\n  margin-left: auto;\n  margin-right: auto;\n}\n.demo-header__middle h4 {\n  color: #37474F;\n  flex: 1 0 auto;\n  margin: 0;\n}\na.github-link {\n  display: flex;\n  align-items: center;\n}\na.github-link   img {\n  height: 1em;\n}\n"
 
 /***/ }),
 /* 11 */
@@ -1651,7 +1651,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__demo_js__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__index_css__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__index_css__ = __webpack_require__(47);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__index_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__index_css__);
 
 
@@ -18958,11 +18958,14 @@ module.exports = camelize;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dist_TimeInput__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__github_png__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__github_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__github_png__);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
 
 
 
@@ -19004,18 +19007,37 @@ var DemoTimeInput = function (_React$Component) {
       'div',
       null,
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'h2',
-        null,
-        'DEMO react-keyboard-time-input'
+        'div',
+        { className: 'demo-header' },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { className: 'demo-header__middle' },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'h4',
+            null,
+            'react-keyboard-time-input demo'
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'a',
+            {
+              href: 'https://github.com/radumardale/react-keyboard-time-input',
+              className: 'github-link' },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: __WEBPACK_IMPORTED_MODULE_2__github_png___default.a })
+          )
+        )
       ),
-      keys.map(function (valName) {
-        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__dist_TimeInput__["a" /* default */], {
-          key: valName,
-          onChange: _this3.onInputChange(valName).bind(_this3),
-          value: _this3.state[valName],
-          defaultValue: '12:00:00:000 AM'
-        });
-      })
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: 'middle-container' },
+        keys.map(function (valName) {
+          return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__dist_TimeInput__["a" /* default */], {
+            key: valName,
+            onChange: _this3.onInputChange(valName).bind(_this3),
+            value: _this3.state[valName],
+            defaultValue: '12:00:00:000 AM'
+          });
+        })
+      )
     );
   };
 
@@ -20987,6 +21009,12 @@ var replace = function replace(groups, groupId, amount) {
 /* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
+module.exports = __webpack_require__.p + "f87561b8bb354ef83b09a66e54f70e08.png";
+
+/***/ }),
+/* 47 */
+/***/ (function(module, exports, __webpack_require__) {
+
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
@@ -20998,7 +21026,7 @@ var transform;
 var options = {"hmr":true}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(47)(content, options);
+var update = __webpack_require__(48)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(true) {
@@ -21015,7 +21043,7 @@ if(true) {
 }
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -21071,7 +21099,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(48);
+var	fixUrls = __webpack_require__(49);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -21387,7 +21415,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, exports) {
 
 
