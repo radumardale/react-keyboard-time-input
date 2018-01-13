@@ -58,6 +58,11 @@ a.github-link {
   display: flex;
   align-items: center;
 }
-a.github-link   img {
+
+a.github-link img {
+  opacity: 0.6;
   height: 1em;
+}
+a.github-link:hover img {
+  opacity: 1;
 }
