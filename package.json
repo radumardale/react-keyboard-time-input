@@ -1,6 +1,6 @@
 {
   "name": "react-keyboard-time-input",
-  "version": "2.0.0",
+  "version": "2.0.3",
   "description": "A keyboard friendly react component for capturing time",
   "main": "./dist/TimeInput",
   "scripts": {
@@ -52,6 +52,7 @@
     "karma-spec-reporter": "0.0.26",
     "karma-webpack": "^1.7.0",
     "mocha": "^2.4.5",
+    "prettier": "^1.10.2",
     "prop-types": "^15.5.10",
     "raw-loader": "^0.5.1",
     "react": "^15.5.4",

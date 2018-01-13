@@ -1,16 +1,15 @@
-import React from "react";
+import React from 'react';
 
-import TimeInput from "../dist/TimeInput";
+import TimeInput from '../dist/TimeInput';
 
 export default class DemoTimeInput extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {
       val1: '11:30:00:000 PM',
       val2: '11:30:00:000',
       val3: '11:30 PM',
-      val4: '11:30',
+      val4: '11:30'
     };
   }
 
@@ -19,11 +18,10 @@ export default class DemoTimeInput extends React.Component {
       this.setState({
         [val]: time
       });
-    }
+    };
   }
 
   render() {
-
     const keys = Object.keys(this.state);
 
     return (
