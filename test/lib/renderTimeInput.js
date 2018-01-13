@@ -1,8 +1,8 @@
-var React = require('react')
-var ReactDOM = require('react-dom')
-var TimeInput = require('../../src/TimeInput')
+import React from 'react';
+import ReactDOM from 'react-dom';
+import TimeInput from '../../src/TimeInput';
 
-module.exports = function renderTimeInput (value, el, omitOnChange) {
+export default (value, el, omitOnChange) => {
   var timeInput = render(value)
   timeInput.input.focus()
   return timeInput
