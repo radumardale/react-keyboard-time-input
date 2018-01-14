@@ -1,6 +1,6 @@
 {
   "name": "react-keyboard-time-input",
-  "version": "2.0.5",
+  "version": "2.1.0",
   "description": "A keyboard friendly react component for capturing time",
   "module": "./src/TimeInput",
   "main": "./dist/TimeInput",
