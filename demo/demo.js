@@ -10,7 +10,9 @@ export default class DemoTimeInput extends React.Component {
       val1: '11:30:00:000 PM',
       val2: '11:30:00:000',
       val3: '11:30 PM',
-      val4: '11:30'
+      val4: '11:30',
+      val5: '11:30:00.000 PM',
+      val6: '11:30:00.000'
     };
   }
 
@@ -44,7 +46,9 @@ export default class DemoTimeInput extends React.Component {
               key={valName}
               onChange={this.onInputChange(valName).bind(this)}
               value={this.state[valName]}
-              defaultValue="12:00:00:000 AM"
+              useMSDotDelimiter={this.state[valName].includes('.') ? true : false}
+              allowMouseWheel={this.state[valName].includes('.') ? true : false}
+              allowPaste={this.state[valName].includes('.') ? true : false}
             />
           ))}
         </div>

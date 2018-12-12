@@ -4,10 +4,11 @@ import getBase from './get-base';
 import stringify from './stringify';
 import toggle24Hr from './toggle-24-hour';
 import isTwelveHourTime from './is-twelve-hour-time';
+import isSecondsOnly from './is-seconds-only';
 
-const add = (groups, groupId, amount, twelveHourTime) => {
-  var base = getBase(groupId, twelveHourTime);
-  if (!groupId && groups[groupId] === '12' && twelveHourTime)
+const add = (groups, groupId, amount, twelveHourTime, secondsOnly) => {
+  var base = getBase(groupId, twelveHourTime, secondsOnly);
+  if (!secondsOnly && !groupId && groups[groupId] === '12' && twelveHourTime)
     groups[groupId] = '00';
   var val = Number(groups[groupId]) + amount;
   groups = replace(groups, groupId, (val + base) % base);
@@ -28,10 +29,11 @@ const replace = (groups, groupId, amount) => {
 };
 
 // export default function adder(str, groupId, amount) {
-export default (str, groupId, amount) => {
+export default (str, groupId, amount, silhouette) => {
   var groups = getGroups(str);
+  var secondsOnly = isSecondsOnly(groups, silhouette);
   var twelveHourTime = isTwelveHourTime(groups);
   if (twelveHourTime && groupId === groups.length - 1)
-    return stringify(toggle24Hr(groups));
-  return stringify(add(groups, groupId, amount, twelveHourTime));
+    return stringify(toggle24Hr(groups), silhouette);
+  return stringify(add(groups, groupId, amount, twelveHourTime, secondsOnly), silhouette);
 };

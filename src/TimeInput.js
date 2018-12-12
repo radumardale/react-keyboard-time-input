@@ -11,9 +11,10 @@ import caret from './lib/caret';
 import validate from './lib/validate';
 
 const SILHOUETTE = '00:00:00:000 AM';
+const SILHOUETTE_MSDOT = '00:00:00.000 AM';
 
 // isSeparator :: Char -> Bool
-const isSeparator = char => /[:\s]/.test(char);
+const isSeparator = char => /[:.\s]/.test(char);
 
 var TimeInput = CreateReactClass({
   getInitialState() {
@@ -21,13 +22,20 @@ var TimeInput = CreateReactClass({
   },
   getDefaultProps() {
     return {
-      value: '12:00 AM'
+      value: '12:00 AM',
+      silhouette: SILHOUETTE,
     };
   },
   propTypes: {
     className: PropTypes.string,
     value: PropTypes.string,
-    onChange: PropTypes.func
+    onChange: PropTypes.func,
+    useMSDotDelimiter: PropTypes.bool,
+    allowPaste: PropTypes.bool,
+    allowMouseWheel: PropTypes.bool,
+  },
+  getSilhouette() {
+    return this.props.useMSDotDelimiter !== true ? SILHOUETTE : SILHOUETTE_MSDOT;
   },
   render() {
     var className = 'TimeInput';
@@ -46,6 +54,9 @@ var TimeInput = CreateReactClass({
           onChange={this.handleChange}
           onBlur={this.handleBlur}
           onKeyDown={this.handleKeyDown}
+          onWheel={this.handleMouseWheel}
+          onSelect={this.handleSelect}
+          onPaste={this.handlePaste}
         />
       </div>
     );
@@ -96,11 +107,12 @@ var TimeInput = CreateReactClass({
       amount *= 2;
       if (event.metaKey) amount *= 2;
     }
-    value = adder(value, getGroupId(start), amount);
+    // console.log(this.props.silhouette);
+    value = adder(value, getGroupId(start), amount, this.getSilhouette());
     this.onChange(value, start);
   },
   silhouette() {
-    return this.props.value.replace(/\d/g, (val, i) => SILHOUETTE.charAt(i));
+    return this.props.value.replace(/\d/g, (val, i) => this.getSilhouette().charAt(i));
   },
   handleBackspace(event) {
     event.preventDefault();
@@ -111,18 +123,18 @@ var TimeInput = CreateReactClass({
     var diff = end - start;
     var silhouette = this.silhouette();
     if (!diff) {
-      if (value[start - 1] === ':') start--;
+      if ([':', '.'].includes(value[start - 1])) start--;
       value = replaceCharAt(value, start - 1, silhouette.charAt(start - 1));
       start--;
     } else {
       while (diff--) {
-        if (value[end - 1] !== ':') {
+        if (![':', '.'].includes(value[end - 1])) {
           value = replaceCharAt(value, end - 1, silhouette.charAt(end - 1));
         }
         end--;
       }
     }
-    if (value.charAt(start - 1) === ':') start--;
+    if ([':', '.'].includes(value.charAt(start - 1))) start--;
     this.onChange(value, start);
   },
   handleForwardSpace(event) {
@@ -134,18 +146,18 @@ var TimeInput = CreateReactClass({
     var diff = end - start;
     var silhouette = this.silhouette();
     if (!diff) {
-      if (value[start] === ':') start++;
+      if ([':', '.'].includes(value[start])) start++;
       value = replaceCharAt(value, start, silhouette.charAt(start));
       start++;
     } else {
       while (diff--) {
-        if (value[end - 1] !== ':') {
+        if (![':', '.'].includes(value[end - 1])) {
           value = replaceCharAt(value, start, silhouette.charAt(start));
         }
         start++;
       }
     }
-    if (value.charAt(start) === ':') start++;
+    if ([':', '.'].includes(value.charAt(start))) start++;
     this.onChange(value, start);
   },
   handleKeyDown(event) {
@@ -163,6 +175,39 @@ var TimeInput = CreateReactClass({
       return this.handleArrows(event);
     default:
       break;
+    }
+  },
+  handleMouseWheel(e) {
+    if (this.props.allowMouseWheel !== true) return;
+    if (document.activeElement === this.input) {
+      e.which = e.deltaY < 0 ? 38 : 40;
+      this.handleArrows(e);
+    }
+  },
+  handlePaste(e) {
+    if (this.props.allowPaste !== true) return;
+    const newValue = e.clipboardData.getData('text/plain');
+    if (validate(newValue) && newValue.length === this.props.value.length) {
+      this.onChange(newValue, newValue.length);
+    }
+    event.preventDefault();
+  },
+  handleSelect(e) {
+    // try to get the selection to break at the dot instead of selecting to the colon
+    const inp = e.currentTarget;
+    if (inp.selectionStart === inp.selectionEnd) {
+      this.cursorIndex = inp.selectionStart;
+    } else if (inp.selectionStart + inp.selectionEnd !== inp.value.length) {
+      const selText = inp.value.substring(inp.selectionStart, inp.selectionEnd);
+      const selDot = selText.indexOf('.');
+      const textDot = inp.value.indexOf('.');
+      if (selDot > -1) {
+        if (this.cursorIndex > selDot + inp.selectionStart) {
+          inp.setSelectionRange(textDot + 1, textDot + 4);  
+        } else {
+          inp.setSelectionRange(textDot - 2, textDot);
+        }
+      }
     }
   },
   handleChange(event) {
@@ -195,7 +240,7 @@ var TimeInput = CreateReactClass({
       }
       newValue = value;
     } else {
-      if (newValue.charAt(start) === ':') start++;
+      if ([':', '.'].includes(newValue.charAt(start))) start++;
       // apply default to selection
       let result = value;
       for (var i = start; i < end; i++) {
@@ -204,7 +249,7 @@ var TimeInput = CreateReactClass({
       newValue = result;
     }
     if (validate(newValue)) {
-      if (newValue.charAt(end) === ':') end++;
+      if ([':', '.'].includes(newValue.charAt(end))) end++;
       this.onChange(newValue, end);
     } else {
       var caretIndex = this.props.value.length - (newValue.length - end);
