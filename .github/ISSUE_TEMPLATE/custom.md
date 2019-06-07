@@ -4,7 +4,7 @@ about: Describe this issue template's purpose here.
 title: ''
 labels: ''
 assignees: ''
-milestone: '1'
+milestone: 1
 
 ---
 
