@@ -3,5 +3,6 @@ module.exports = {
   collectCoverageFrom: ['src/**/*.{js,jsx}'],
   testMatch: ['<rootDir>/test/*.test.js'],
   bail: true,
-  verbose: false
+  verbose: false,
+  testURL: 'http://localhost/'
 };

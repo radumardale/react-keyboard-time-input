@@ -65,6 +65,18 @@ describe('up', function() {
       '01:00:00:000 AM'
     );
   });
+  it('should increment minutes with given step amount', function() {
+    expect(arrow('01:00 AM', 3, true, false, false, 15).input.value).toEqual('01:15 AM');
+    expect(arrow('01:00:00:000 PM', 3, true, false, false, 15).input.value).toEqual(
+      '01:15:00:000 PM'
+    );
+  });
+  it('should increment hours with given step for minutes amount', function() {
+    expect(arrow('01:45 AM', 3, true, false, false, 15).input.value).toEqual('02:00 AM');
+    expect(arrow('01:45:00:000 PM', 3, true, false, false, 15).input.value).toEqual(
+      '02:00:00:000 PM'
+    );
+  });
 });
 
 describe('down', function() {
@@ -129,11 +141,23 @@ describe('down', function() {
       '01:00:00:000 AM'
     );
   });
+  it('should decrement minutes with given step amount', function() {
+    expect(arrow('01:30 AM', 3, false, false, false, 15).input.value).toEqual('01:15 AM');
+    expect(arrow('01:30:00:000 PM', 3, false, false, false, 15).input.value).toEqual(
+      '01:15:00:000 PM'
+    );
+  });
+  it('should decrement hours with given step for minutes amount', function() {
+    expect(arrow('01:00 AM', 3, false, false, false, 15).input.value).toEqual('12:45 AM');
+    expect(arrow('01:00:00:000 PM', 3, false, false, false, 15).input.value).toEqual(
+      '12:45:00:000 PM'
+    );
+  });
 });
 
-function arrow(value, caretIndex, up, shiftKey, metaKey) {
+function arrow(value, caretIndex, up, shiftKey, metaKey, step) {
   document.body.innerHTML = '<div></div>';
-  var timeInput = render(value);
+  var timeInput = render(value, null, false, step);
   caret.set(timeInput.input, caretIndex);
   ReactTestUtils.Simulate.keyDown(timeInput.input, {
     keyCode: up ? 38 : 40,
