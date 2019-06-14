@@ -87,16 +87,36 @@ var TimeInput = CreateReactClass({
     if (this.props.value.charAt(index) === ' ') index++;
     if (this.mounted) this.setState({ caretIndex: index });
   },
-  handleArrows(event) {
-    event.preventDefault();
-    var start = caret.start(this.input);
-    var value = this.props.value;
-    var amount = event.which === 38 ? 1 : -1;
+  getStep() {
+    var step = this.props.step;
+    if (typeof step === 'number') {
+      return step;
+    } else {
+      return 1;
+    }
+  },
+  getAmount(event, groupId) {
+    var amount = 1;
+    if (groupId === 1) {
+      amount = this.getStep();
+    }
     if (event.shiftKey) {
       amount *= 2;
       if (event.metaKey) amount *= 2;
     }
-    value = adder(value, getGroupId(start), amount);
+    if (event.which === 38) {
+      return amount;
+    } else {
+      return -amount;
+    }
+  },
+  handleArrows(event) {
+    event.preventDefault();
+    var start = caret.start(this.input);
+    var value = this.props.value;
+    var groupId = getGroupId(start);
+    var amount = this.getAmount(event, groupId);
+    value = adder(value, groupId, amount);
     this.onChange(value, start);
   },
   silhouette() {
